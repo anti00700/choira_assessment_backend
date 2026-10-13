@@ -7,7 +7,9 @@ const ssl = process.env.MYSQL_SSL_CA_PATH
       ca: fs.readFileSync(process.env.MYSQL_SSL_CA_PATH),
       rejectUnauthorized: true,
     }
-  : undefined;
+  : process.env.MYSQL_SSL === 'true'
+    ? { rejectUnauthorized: false }
+    : undefined;
 
 const pool = mysql.createPool({
   ...config.mysql,
