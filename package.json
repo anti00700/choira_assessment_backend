@@ -1,0 +1,28 @@
+{
+  "name": "project-task-api",
+  "version": "1.0.0",
+  "description": "RESTful Project & Task Management API (Node.js, Express, MySQL, MongoDB)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:init": "node scripts/initDb.js"
+  },
+  "engines": {
+    "node": ">=18.12"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.11.5"
+  }
+}
